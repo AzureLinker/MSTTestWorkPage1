@@ -3,7 +3,7 @@
         padding: 0;
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
     
     svg {
@@ -55,6 +55,17 @@
         grid-area: com_name;
     }
     
+    .company_name a {
+        font-family: "Prata", serif;
+        font-weight: 400;
+        font-size: xx-large;
+        line-height: 1.5em;
+        letter-spacing: 3%;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+    }
+    
     .header_menu {
         list-style: none;
         display: flex;
@@ -89,6 +100,21 @@
         font-style: italic;
         font-weight: 400;
         letter-spacing: 4%;
+    }
+    
+    .header_menu .header_item::before {
+        content: "";
+        position: absolute;
+        top: 5em;
+        border: 0 solid #D5C9BE;
+        width: 0;
+        height: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .header_menu .header_item:hover::before {
+        width: 5em;
+        background-color: #D5C9BE;
     }
     
     .first_frame {
@@ -246,6 +272,10 @@
         border-radius: .2em;
     }
     
+    .btn:hover {
+        background-color: #D5C9BE;
+    }
+    
     .second_frame .order_btn {
         color: #282829;
         display: block;
@@ -332,6 +362,12 @@
         cursor: pointer;
     }
     
+    .order_form .form_inputs input[type=submit]:hover {
+        color: #282829;
+        background-color: #fff;
+        outline: 2px solid #282829;
+    }
+    
     .jump_links {
         border-top: 2px solid #D5C9BE;
         border-bottom: 2px solid #D5C9BE;
@@ -355,6 +391,10 @@
         padding: 0em 2em;
     }
     
+    .jump_links a:hover {
+        border-bottom: 2px solid #D5C9BE;
+    }
+    
     .info_box .info_first {
         display: flex;
         align-items: center;
@@ -376,22 +416,47 @@
     
     .links_menu .link_item .link_ig {
         background-image: url('../svg/Component iconsig.svg');
+        border-radius: 1em;
+    }
+    
+    .links_menu .link_item .link_ig:hover {
+        background-color: #e1306c;
     }
     
     .links_menu .link_item .link_tk {
         background-image: url('../svg/Component iconstk.svg');
+        border-radius: 1em;
+    }
+    
+    .links_menu .link_item .link_tk:hover {
+        background-color: #000000;
     }
     
     .links_menu .link_item .link_linkin {
         background-image: url('../svg/Component iconslinkin.svg');
+        border-radius: 1em;
+    }
+    
+    .links_menu .link_item .link_linkin:hover {
+        background-color: #0a66c2;
     }
     
     .links_menu .link_item .link_tg {
         background-image: url('../svg/Component iconstg.svg');
+        border-radius: 1em;
+    }
+    
+    .links_menu .link_item .link_tg:hover {
+        background-color: #0088cc;
     }
     
     .links_menu .link_item .link_yt {
         background-image: url('../svg/Component iconsyt.svg');
+        border-radius: 1em;
+    }
+    
+    .links_menu .link_item .link_yt:hover {
+        background-color: #f00;
     }
     
     .info_box .info_first .order_btn {
